@@ -1,0 +1,12 @@
+services:
+  bangla-ocr:
+    build: .
+    image: bangla-ocr-app:0.1
+    init: true
+    ports:
+      - "8501:8501"
+    volumes:
+      - mlflow-data:/app/artifacts/mlflow
+
+volumes:
+  mlflow-data:
